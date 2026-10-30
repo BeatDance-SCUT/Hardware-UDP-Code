@@ -1,0 +1,23 @@
+[project]
+name = "beatdance-udp-code"
+version = "0.1.0"
+description = "ESP32-S3 IMU six-axis UDP streaming: firmware and live Python plotter"
+readme = "README.md"
+authors = [
+    { name = "The-Unknown-01", email = "liuyuxi871@outlook.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.2",
+]
+
+[project.scripts]
+beatdance-udp-code = "beatdance_udp_code:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
